@@ -24,6 +24,7 @@ public interface UpdateDownloadListener {
      */
     public void onFinished(int completeSize, String downloadUrl);
 
+
     /**
      * 下载失败回调
      */
