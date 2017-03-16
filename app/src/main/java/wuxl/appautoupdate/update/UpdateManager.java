@@ -1,7 +1,5 @@
 package wuxl.appautoupdate.update;
 
-import android.util.Log;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.Executors;
@@ -10,8 +8,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 下载调度管理器,调用我们的UpdateDownloadRequest
- * Created by wuxl_
- * time：2016/8/8 16:09
  */
 public class UpdateManager {
 
@@ -36,12 +32,11 @@ public class UpdateManager {
         if (request != null) {
             return;
         }
-
         checkLocalFilePath(localPath);
-
         //开始文件的下载任务
         request = new UpdateDownloadRequest(downloadUrl, localPath, listener);
         Future<?> future = threadPoolExecutor.submit(request);
+        //request置空确保可以执行下次任务
         request=null;
     }
 

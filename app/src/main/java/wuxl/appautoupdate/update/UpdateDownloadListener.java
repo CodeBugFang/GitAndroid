@@ -2,8 +2,6 @@ package wuxl.appautoupdate.update;
 
 /**
  * 事件的监听回调
- * Created by wuxl_
- * time：2016/8/8 16:08
  */
 public interface UpdateDownloadListener {
 

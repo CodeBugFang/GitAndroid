@@ -13,8 +13,6 @@ import java.net.URL;
 
 /**
  * 负责文件的下载和线程间的通信
- * Created by wuxl_
- * time：2016/8/8 16:08
  */
 public class UpdateDownloadRequest implements Runnable {
 

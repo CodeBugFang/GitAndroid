@@ -2,8 +2,11 @@ package wuxl.appautoupdate.Content;
 
 import android.app.Application;
 
+/**
+ * 全局Application
+ */
 public class MyAppContent extends Application{
-    private boolean UpData=true;
+    private boolean UpData=true;//点击按钮判断是否正在下载
 
     @Override
     public void onCreate() {

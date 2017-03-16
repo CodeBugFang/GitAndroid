@@ -11,17 +11,12 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.TextView;
-
 import java.io.File;
-
 import wuxl.appautoupdate.Content.MyAppContent;
 import wuxl.appautoupdate.R;
 
 /**
  * app更新下载后台服务
- * Created by wuxl_
- * time：2016/8/8 16:09
  */
 public class UpdateService extends Service {
 
@@ -30,7 +25,6 @@ public class UpdateService extends Service {
     private NotificationManager notificationManager;
 
     private static final String TAG = "TAG";
-
 
     @Override
     public void onCreate() {
