@@ -27,7 +27,6 @@ public class UpdateManager {
         return manager;
     }
 
-
     public void startDownloads(String downloadUrl, String localPath, UpdateDownloadListener listener) {
         if (request != null) {
             return;
@@ -37,7 +36,7 @@ public class UpdateManager {
         request = new UpdateDownloadRequest(downloadUrl, localPath, listener);
         Future<?> future = threadPoolExecutor.submit(request);
         //request置空确保可以执行下次任务
-        request=null;
+        request = null;
     }
 
     /**

@@ -13,8 +13,8 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import java.io.File;
 
+import java.io.File;
 
 /**
  * app更新下载后台服务

@@ -5,8 +5,8 @@ import android.app.Application;
 /**
  * 全局Application
  */
-public class MyAppContent extends Application{
-    private boolean UpData=true;//点击按钮判断是否正在下载
+public class MyAppContent extends Application {
+    private boolean UpData = true;//点击按钮判断是否正在下载
 
     @Override
     public void onCreate() {
@@ -15,8 +15,7 @@ public class MyAppContent extends Application{
 
     private static final MyAppContent instance = new MyAppContent();
 
-    public static MyAppContent getApplicationInstance()
-    {
+    public static MyAppContent getApplicationInstance() {
         return instance;
     }
 
@@ -27,6 +26,5 @@ public class MyAppContent extends Application{
     public void setUpData(boolean upData) {
         UpData = upData;
     }
-
 
 }

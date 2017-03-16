@@ -17,13 +17,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-
 public class MainActivity extends AppCompatActivity {
     private Context context;
     private Button btn_view;
     private static final int REQUEST_WRITE_STORAGE = 111;
     private CustomDialog mDialog = null;
-    private boolean IsUpdata=true;
+    private boolean IsUpdata = true;
 
     //apk下载链接
     private static final String APK_DOWNLOAD_URL = "http://192.168.1.166:808/app/bx.apk";
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context=MainActivity.this;
+        context = MainActivity.this;
 
         btn_view = (Button) findViewById(R.id.btn_view);
         btn_view.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                     //下载
                     startDownload();
                 }
-
             }
         });
         mDialog.show();
@@ -87,16 +85,16 @@ public class MainActivity extends AppCompatActivity {
      * 启动下载
      */
     private void startDownload() {
-        IsUpdata= MyAppContent.getApplicationInstance().isUpData();
-        if (IsUpdata){
+        IsUpdata = MyAppContent.getApplicationInstance().isUpData();
+        if (IsUpdata) {
             MyAppContent.getApplicationInstance().setUpData(false);
             Intent it = new Intent(MainActivity.this, UpdateService.class);
             //下载地址
             it.putExtra("apkUrl", APK_DOWNLOAD_URL);
             startService(it);
             mDialog.dismiss();
-        }else {
-            Toast.makeText(context,"正在下载...",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "正在下载...", Toast.LENGTH_SHORT).show();
             mDialog.dismiss();
         }
 

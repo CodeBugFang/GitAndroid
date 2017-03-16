@@ -12,7 +12,6 @@ public interface UpdateDownloadListener {
 
     /**
      * 进度更新回调
-     *
      * @param progress
      * @param downloadUrl
      */

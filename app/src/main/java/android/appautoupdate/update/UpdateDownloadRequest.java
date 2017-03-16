@@ -49,7 +49,6 @@ public class UpdateDownloadRequest implements Runnable {
                 downloadResponseHandler.sendResponseMessage(connection.getInputStream());
             }
         }
-
     }
 
     @Override
