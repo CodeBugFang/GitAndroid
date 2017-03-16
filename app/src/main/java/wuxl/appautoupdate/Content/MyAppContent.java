@@ -5,8 +5,6 @@ import android.app.Application;
 public class MyAppContent extends Application{
     private boolean UpData=true;
 
-
-
     @Override
     public void onCreate() {
         super.onCreate();
